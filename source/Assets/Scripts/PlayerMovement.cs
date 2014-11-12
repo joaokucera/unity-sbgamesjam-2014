@@ -5,10 +5,8 @@ public class PlayerMovement : MonoBehaviour
 {
     #region [ FIELDS ]
 
-    private Vector2 speed = new Vector2(10, 10);
-    private Vector2 movement;
+    private Vector2 movement, speed, spriteSize;
     private SpriteRenderer spriteRenderer;
-    private Vector2 spriteSize;
 
     #endregion
 
@@ -18,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     {
         spriteRenderer = renderer as SpriteRenderer;
         spriteSize = spriteRenderer.bounds.size;
+
+        speed = new Vector2(10, 10);
     }
 
     void Update()
