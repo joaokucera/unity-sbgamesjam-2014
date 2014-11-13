@@ -7,11 +7,16 @@ public class ScreenResolution : MonoBehaviour
 
     public static ScreenResolution Instance;
 
-    private Rect screenBorders, riverBorders;
+    private Rect worldBorders, riverBorders;
 
     #endregion
 
     #region [ PROPERTIES ]
+
+    public Rect WorldBorders
+    {
+        get { return worldBorders; }
+    }
 
     public Rect RiverBorders
     {
@@ -28,26 +33,23 @@ public class ScreenResolution : MonoBehaviour
         {
             Instance = this;
 
-            screenBorders = new Rect
-            (
-                -(camera.orthographicSize * camera.aspect),
-                -camera.orthographicSize,
-                camera.orthographicSize * camera.aspect,
-                camera.orthographicSize
-            );
+            worldBorders.xMin = -camera.orthographicSize * camera.aspect;
+            worldBorders.xMax = camera.orthographicSize * camera.aspect;
+            worldBorders.yMin = -camera.orthographicSize;
+            worldBorders.yMax = camera.orthographicSize;
 
             Transform riverTransform = GameObject.FindGameObjectWithTag("River").transform;
             Vector2 riverPosition = riverTransform.position;
             SpriteRenderer riverRenderer = riverTransform.renderer as SpriteRenderer;
 
+            Transform terrainTransform = GameObject.FindGameObjectWithTag("Terrain").transform;
+            Vector2 terrainPosition = terrainTransform.position;
+            SpriteRenderer terrainRenderer = terrainTransform.renderer as SpriteRenderer;
+
             riverBorders.xMin = riverPosition.x - riverRenderer.bounds.size.x / 2;
             riverBorders.xMax = riverPosition.x - riverRenderer.bounds.size.x / 4;
-            riverBorders.yMin = riverPosition.y - riverRenderer.bounds.size.y / 2;
+            riverBorders.yMin = terrainPosition.y + terrainRenderer.bounds.size.y / 2;
             riverBorders.yMax = riverPosition.y + riverRenderer.bounds.size.y / 2;
-
-            // 96 px
-            // 160 px
-            // 32 px
         }
     }
 

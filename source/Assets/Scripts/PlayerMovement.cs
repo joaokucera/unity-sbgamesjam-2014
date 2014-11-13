@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
     #region [ FIELDS ]
@@ -17,13 +19,11 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = renderer as SpriteRenderer;
         spriteSize = spriteRenderer.bounds.size;
 
-        speed = new Vector2(10, 10);
+        speed = new Vector2(5, 5);
     }
 
     void Update()
     {
-        Vector2 currentPosition = transform.position;
-
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
 

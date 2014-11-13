@@ -6,6 +6,7 @@ TagManager:
   - River
   - Background
   - Terrain
+  - Spawner
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -44,7 +45,27 @@ TagManager:
     userID: 0
     uniqueID: 0
     locked: 0
+  - name: Background
+    userID: 2
+    uniqueID: 2714187219
+    locked: 0
+  - name: River
+    userID: 3
+    uniqueID: 1031859447
+    locked: 0
+  - name: Obstacles
+    userID: 6
+    uniqueID: 3079205345
+    locked: 0
+  - name: Wave
+    userID: 4
+    uniqueID: 2717650153
+    locked: 0
   - name: Player
     userID: 1
     uniqueID: 2169101827
+    locked: 0
+  - name: Terrain
+    userID: 5
+    uniqueID: 4207524979
     locked: 0
