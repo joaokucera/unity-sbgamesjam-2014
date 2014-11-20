@@ -33,6 +33,13 @@ public class GameOver : MonoBehaviour
 
     public virtual void Action()
     {
-        Application.LoadLevel(levelToGo);
+        if (UnityAdsHelper.isReady())
+        {
+            UnityAdsHelper.Show();
+        }
+        else
+        {
+            Application.LoadLevel(levelToGo);
+        }
     }
 }
