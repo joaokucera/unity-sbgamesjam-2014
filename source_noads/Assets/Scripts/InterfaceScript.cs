@@ -58,6 +58,11 @@ public class InterfaceScript : MonoBehaviour
         spriteRenderer.sprite = lifeSprites[index];
 
         waveAnimator.SetTrigger(nextWaveParameter);
+
+        if (GameObject.FindObjectOfType<ScoreScript>().isGameOver)
+        {
+            spriteRenderer.enabled = false;
+        }
     }
 
     #endregion

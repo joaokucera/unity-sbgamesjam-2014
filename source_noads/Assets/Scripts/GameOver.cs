@@ -13,6 +13,10 @@ public class GameOver : MonoBehaviour
 
     void Start()
     {
+#if UNITY_EDITOR || UNITY_WEBPLAYER
+            pressAnyKeyText.text = "PRESS ANY KEY";
+#endif
+
         pressAnyKeyText.enabled = true;
     }
 

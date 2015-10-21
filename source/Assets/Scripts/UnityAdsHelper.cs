@@ -33,11 +33,11 @@ public class UnityAdsHelper : MonoBehaviour
     {
         if (!Advertisement.isSupported)
         {
-            Debug.Log("Current platform is not supported with Unity Ads.");
+           // Debug.Log("Current platform is not supported with Unity Ads.");
         }
         else if (string.IsNullOrEmpty(gameID))
         {
-            Debug.LogError("A valid game ID is required to initialize Unity Ads.");
+            //Debug.LogError("A valid game ID is required to initialize Unity Ads.");
         }
         else
         {
@@ -73,18 +73,18 @@ public class UnityAdsHelper : MonoBehaviour
 
     private static void HandleShowResult(ShowResult result)
     {
-        switch (result)
-        {
-            case ShowResult.Finished:
-                Debug.Log("The ad was successfully shown.");
-                break;
-            case ShowResult.Skipped:
-                Debug.Log("The ad was skipped before reaching the end.");
-                break;
-            case ShowResult.Failed:
-                Debug.LogError("The ad failed to be shown.");
-                break;
-        }
+        //switch (result)
+        //{
+        //    case ShowResult.Finished:
+        //        Debug.Log("The ad was successfully shown.");
+        //        break;
+        //    case ShowResult.Skipped:
+        //        Debug.Log("The ad was skipped before reaching the end.");
+        //        break;
+        //    case ShowResult.Failed:
+        //        Debug.LogError("The ad failed to be shown.");
+        //        break;
+        //}
 
         Application.LoadLevel("Level");
     }

@@ -26,6 +26,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+#if UNITY_EDITOR || UNITY_WEBPLAYER
+        moveTouchPad.guiTexture.enabled = false;
+#endif
+
         spriteRenderer = renderer as SpriteRenderer;
         spriteSize = spriteRenderer.bounds.size;
     }
@@ -42,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 input = Vector2.zero;
 
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_WEBPLAYER
         input.x = Input.GetAxis("Horizontal");
         input.y = Input.GetAxis("Vertical");
 #else

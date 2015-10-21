@@ -1931,14 +1931,14 @@ GUITexture:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 634226524}
   m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: 400c2f66c145548b6a08e6ac69655ea2, type: 3}
+  m_Texture: {fileID: 2800000, guid: 8fd8bd9d96eae4745862398211e567a6, type: 3}
   m_Color: {r: .5, g: .5, b: .5, a: .150000006}
   m_PixelInset:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 200
-    height: 125
+    width: 128
+    height: 128
   m_LeftBorder: 0
   m_RightBorder: 0
   m_TopBorder: 0
@@ -1950,7 +1950,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 634226524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: .0250000004, y: .0250000004, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3285,7 +3285,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3a1c7172744fad44392b8fec1d3b9bbc, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a1c7172744fad44392b8fec1d3b9bbc, type: 2}
@@ -4157,7 +4157,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2791dd547f8bca847b94f351e6c912f1, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 2791dd547f8bca847b94f351e6c912f1, type: 2}
       propertyPath: m_Name
@@ -4491,7 +4491,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 637412515f83af64186a594c59c7d463, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 637412515f83af64186a594c59c7d463, type: 2}
       propertyPath: m_Enabled

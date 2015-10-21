@@ -11,6 +11,13 @@ public class ButtonScript : MonoBehaviour
     private const float BlinkTime = 0.5f;
     private float timeToBlink;
 
+    void Start()
+    {
+#if UNITY_EDITOR || UNITY_WEBPLAYER
+        pressAnyKeyText.text = "PRESS ANY KEY";
+#endif
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

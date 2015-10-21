@@ -28,7 +28,6 @@ public class ScoreScript : MonoBehaviour
         lifeHUD.enabled = false;
 
         guiTextLifeAnimator.SetTrigger("IsGameOver");
-
         playerMovementScript.OnEndGame();
 
         GetComponent<GameOver>().enabled = true;
